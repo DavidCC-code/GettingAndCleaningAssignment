@@ -1,4 +1,5 @@
 
+
 file <- "./UCI HAR Dataset/train/X_train.txt"
 X_train <- read.table(file)
 
@@ -12,9 +13,15 @@ rm(X_train, X_test)
 file <- "./UCI HAR Dataset/features.txt"
 variables <- read.table(file)
 
-colnames(X) <- grep( "([a-z.a-z])", variables$V2, value=TRUE)
+# remove special characters from variable names and
+# change to lowercase to use them as proper column names
+variables$V2 <- str_replace_all(variables$V2,"[,-]","_")
+variables$V2 <- str_replace_all(variables$V2,"[\\(\\)]","")
+variables$V2 <- tolower(variables$V2)
+
+colnames(X) <-  variables$V2
 rm(variables)
 
 # Select only mean and std functions variables,there are 66 of them
-mean_std <- select(X, matches("-mean\\(\\)|-std\\(\\)"))
+mean_std <- select(X, matches("_mean$|_std$|_mean_[xyz]$|_std_[xyz]$"))
 rm(X)
