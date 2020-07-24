@@ -1,17 +1,14 @@
 
+#load variable data from file
+X_train <- read.table(x_train_file)
+X_test <- read.table(x_test_file)
 
-file <- "./UCI HAR Dataset/train/X_train.txt"
-X_train <- read.table(file)
-
-file <- "./UCI HAR Dataset/test/X_test.txt"
-X_test <- read.table(file)
-
+# bind train and test together
 X <- rbind(X_train, X_test)
 rm(X_train, X_test)
 
 #  Read all variables and assing them as column names of X
-file <- "./UCI HAR Dataset/features.txt"
-variables <- read.table(file)
+variables <- read.table(features_file)
 
 # remove special characters from variable names and
 # change to lowercase to use them as proper column names
@@ -24,4 +21,4 @@ rm(variables)
 
 # Select only mean and std functions variables,there are 66 of them
 mean_std <- select(X, matches("_mean$|_std$|_mean_[xyz]$|_std_[xyz]$"))
-#rm(X)
+rm(X)

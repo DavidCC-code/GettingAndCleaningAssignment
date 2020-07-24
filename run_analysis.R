@@ -4,6 +4,8 @@
 library(plyr)
 library(dplyr)
 library(stringr)
+library(tidyr)
+
 #    
 #  Using UCI HAR Dataset creates two tidy data sets:
 #    1st Containing the only variables for mean and standard deviation of the each measurement and, of course, the corresponding 
@@ -24,11 +26,25 @@ output_avg_dataset  <- "./avgtidydataset.txt"
 #  each script creates a single data frame  
 
 #Subjects 
-
+  subject_train_file <- "./UCI HAR Dataset/train/subject_train.txt"
+  subject_test_file  <- "./UCI HAR Dataset/test/subject_test.txt"
+  
   source("./subjects.R")
+  
 #Labels
+  
+  labels_train_file <- "./UCI HAR Dataset/train/y_train.txt"
+  labels_test_file <- "./UCI HAR Dataset/test/y_test.txt"
+  activity_label_file <- "./UCI HAR Dataset/activity_labels.txt"
+  
   source("./activities.R")
-# mean and std variables data
+  
+# load calculated features from original data set and keep only
+# mean() and std() variables data
+  
+  x_train_file <- "./UCI HAR Dataset/train/X_train.txt"
+  x_test_file <- "./UCI HAR Dataset/test/X_test.txt"
+  features_file <- "./UCI HAR Dataset/features.txt"
   source("./mean_std_var_data.R")
 
 # Bind togheter in a single table subjects, labels, mean() a std()
@@ -41,7 +57,6 @@ output_avg_dataset  <- "./avgtidydataset.txt"
 
   source("./avgtidydataset.R")
 
-  names(which(unlist(eapply(.GlobalEnv,is.data.frame))))
-  
+ 
 
 
