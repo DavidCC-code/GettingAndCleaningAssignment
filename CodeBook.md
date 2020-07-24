@@ -5,7 +5,7 @@ date: "24/7/2020"
 output: html_document
 ---
 
-#Original data set
+# Original data set
 
 The original is "Human Activity Recognition Using Samrtphons Data Set" [1]
 
@@ -17,9 +17,9 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datas
 
 [1] Davide Anguita, Alessandro Ghio, Luca Oneto, Xavier Parra and Jorge L. Reyes-Ortiz. Human Activity Recognition on Smartphones using a Multiclass Hardware-Friendly Support Vector Machine. International Workshop of Ambient Assisted Living (IWAAL 2012). Vitoria-Gasteiz, Spain. Dec 2012
 
-#Output data sets
+# Output data sets
 
-##Data set: __tidyDataSet__
+## Data set: __tidyDataSet__
 
   * __subject__: Test subject identifier, numeric. Values from 1 to 30. Direct from the originaldata set no transformation required. In the original data set subjects were split into file (train and test) and where sorted to match their corresponding measurments. So the only thing to do was append test file to train file keeping the original order.
   
