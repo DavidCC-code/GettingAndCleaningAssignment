@@ -24,4 +24,4 @@ rm(variables)
 
 # Select only mean and std functions variables,there are 66 of them
 mean_std <- select(X, matches("_mean$|_std$|_mean_[xyz]$|_std_[xyz]$"))
-rm(X)
+#rm(X)
