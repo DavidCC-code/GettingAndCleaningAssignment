@@ -30,7 +30,10 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datas
     * SITTING
     * STANDING
     * LAYING
-    The original data set had also two files (train and test) containing a sorted list of the activity measured, supossedly sorted in the order that the measurment were taken, but they were codified as numéric 
+    
+    The original data set had also two files (train and test) containing a sorted list of the activity measured, supossedly sorted in the order that the measurment were taken, but they were codified as numeric. The original data set had a file linking activity codes (labels) and description. So I  joined both files to get the sorted list of activity descriptions.
+    
+    
 
   
   
