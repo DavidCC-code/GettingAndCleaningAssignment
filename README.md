@@ -70,8 +70,8 @@ Source the main script "run_analysis.R" it will run all the scripts.
 
 __Script output:__
 ---
-Two data set in your R enviroment ready to work with, tidyDataSet and avgTidyDataSet.
-And both data sets written each to a text file in your working directori  ./tidyDataSet.txt and ./avgTidyDataSet.txt.
+Data set in your R enviroment ready to work with, avgTidyDataSet.
+Data set written to a text file in your working directori ./avgTidyDataSet.txt.
 
 
 __Uses:__

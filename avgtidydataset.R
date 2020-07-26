@@ -12,4 +12,4 @@ rm(tidyDataSet)
 names(avgTidyDataSet)[names(avgTidyDataSet)=="values"] <- "mean"
 
 # writes to second output file
-write.table(avgtidyDataSet,output_avg_dataset, row.names=FALSE)
+write.table(avgTidyDataSet,output_avg_dataset, row.names=FALSE)
