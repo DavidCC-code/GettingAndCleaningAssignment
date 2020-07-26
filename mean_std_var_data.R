@@ -1,3 +1,4 @@
+#Creates temporary data set contining the measurement on mean and standard deviation on each measurment. 
 
 #load variable data from file
 X_train <- read.table(x_train_file)

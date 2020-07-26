@@ -1,4 +1,6 @@
 
+#Creates a temporary data frame called "activity" containing descriptive name of the activity
+
 #load labels data from files
 labels_train <- read.csv(labels_train_file,header=FALSE)
 labels_test <- read.csv(labels_test_file,header=FALSE)

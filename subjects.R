@@ -1,3 +1,4 @@
+# Gets test and train subjects into the dataset keeping the order of observations. 
 
 #load subjects from files
 subject_train <- read.csv(subject_train_file,header=FALSE)
